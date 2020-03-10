@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/resturant_calculator"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/totalbill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/totalbill"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/billnum"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/textview_border"
+            android:text="@string/_0_00"
+            android:textAlignment="textEnd"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tip"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/tip"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/min1"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/min1"
+            app:srcCompat="@drawable/icon_minus"
+            android:onClick="getInt"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/zero"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/add1"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/min1"
+            app:srcCompat="@drawable/icon_plus"
+            android:onClick="getInt"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/ppl"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:text="@string/ppl"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/min2"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/min2"
+            app:srcCompat="@drawable/icon_minus"
+            android:onClick="getInt"/>
+
+        <TextView
+            android:id="@+id/pplnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="@string/pplnum"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/add2"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/add2"
+            app:srcCompat="@drawable/icon_plus"
+            android:onClick="getInt"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/totalpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total_to_pay"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/payAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_0_00"
+            android:textAlignment="textEnd"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/totaltip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/totaltip"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tipAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_0_00"
+            android:textAlignment="textEnd"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/totalperppl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/totalperppl"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/pplAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/_0_00"
+            android:textAlignment="textEnd"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:layout_marginTop="50dp">
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@string/_1"
+            android:onClick="NumButtonClick"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_2"
+            android:layout_marginStart="30dp"
+            android:onClick="NumButtonClick"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_3"
+            android:layout_marginStart="30dp"
+            android:onClick="NumButtonClick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_4"
+            android:layout_marginStart="40dp"
+            android:onClick="NumButtonClick"/>
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_5"
+            android:layout_marginStart="30dp"
+            android:onClick="NumButtonClick"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_6"
+            android:layout_marginStart="30dp"
+            android:onClick="NumButtonClick"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:paddingTop="20dp">
+
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_7"
+        android:layout_marginStart="40dp"
+        android:onClick="NumButtonClick"/>
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_8"
+        android:layout_marginStart="30dp"
+        android:onClick="NumButtonClick"/>
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_9"
+        android:layout_marginStart="30dp"
+        android:onClick="NumButtonClick"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reset"
+            android:layout_marginStart="40dp"
+            android:textAllCaps="false"
+            android:onClick="Reset"/>
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/_0"
+            android:layout_marginStart="30dp"
+            android:onClick="NumButtonClick"/>
+
+        <Button
+            android:id="@+id/del"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="@string/del"
+            android:layout_marginStart="30dp"
+            android:textAllCaps="false"
+            android:onClick="delete"/>
+    </LinearLayout>
+
+</LinearLayout>

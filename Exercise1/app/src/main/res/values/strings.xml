@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Exercise1</string>
+    <string name="textview">TextView</string>
+    <string name="resturant_calculator">Resturant Calculator</string>
+    <string name="totalbill">Total Bill：</string>
+    <string name="pplnum">1</string>
+    <string name="ppl">Split Bill: </string>
+    <string name="tip">Tip (%):</string>
+    <string name="min2">min2</string>
+    <string name="add2">add2</string>
+    <string name="min1">min1</string>
+    <string name="total_to_pay">Total To Pay:</string>
+    <string name="_0_00">$0.00</string>
+    <string name="totaltip">Total Tips:</string>
+    <string name="totalperppl">Total Per Person:</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="reset">Reset</string>
+    <string name="_0">0</string>
+    <string name="del">Del</string>
+    <string name="zero">0</string>
+</resources>
